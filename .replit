@@ -1,0 +1,24 @@
+[debugger.interactive.launchMessage.arguments]
+MIMode = "gdb"
+arg = []
+cwd = "."
+environment = []
+externalConsole = false
+logging = {}
+miDebuggerPath = "gdb"
+name = "g++ - Build and debug active file"
+program = "./main-debug"
+request = "launch"
+setupCommands = [
+	{ description = "Enable pretty-printing for gdb", ignoreFailures = true, text = "-enable-pretty-printing" }
+]
+stopAtEntry = false
+type = "cppdbg"
+
+[languages]
+
+[languages.cpp]
+pattern = "**/*.{cpp,h}"
+
+[languages.cpp.languageServer]
+start = "ccls"
